@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/Plankton-Project/Barber-App">
-    <img src="https://i.imgur.com/FpkGFaX.png" alt="Logo" width="300" height="300">
+    <img src="https://i.imgur.com/RtOfiFQ.png" alt="Logo" width="300" height="300">
   </a>
 
   <h3 align="center">Barber App</h3>

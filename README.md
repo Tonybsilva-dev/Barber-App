@@ -1,7 +1,7 @@
 
 
 <p align="center">
-  <a href="https://github.com/Plankton-Project/Barber-App">
+  <a href="https://github.com/The-Jellyfish-Project/Barber-App">
     <img src="https://i.imgur.com/RtOfiFQ.png" alt="Logo" width="300" height="300">
   </a>
 
@@ -10,14 +10,14 @@
   <p align="center">
     A complete Barber Shop application
     <br />
-    <a href="https://github.com/Plankton-Project/Barber-App"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/The-Jellyfish-Project/Barber-App"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Plankton-Project/Barber-App">View Demo</a>
+    <a href="https://github.com/The-Jellyfish-Project/Barber-App">View Demo</a>
     ·
-    <a href="https://github.com/Plankton-Project/Barber-App/issues">Report Bug</a>
+    <a href="https://github.com/The-Jellyfish-Project/Barber-App/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Plankton-Project/Barber-App/issues">Request Feature</a>
+    <a href="https://github.com/The-Jellyfish-Project/Barber-App/issues">Request Feature</a>
   </p>
 </p>
 
@@ -59,7 +59,7 @@ npm install npm@latest -g
 
 1. Clone the repo
 ```sh
-git clone https://github.com/Plankton-Project/Barber-App.git
+git clone https://github.com/The-Jellyfish-Project/Barber-App.git
 ```
 2. Install NPM packages
 ```sh
@@ -77,7 +77,7 @@ npm install
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/Plankton-Project/Barber-App/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/The-Jellyfish-Project/Barber-App/issues) for a list of proposed features (and known issues).
 
 
 
@@ -104,8 +104,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Antônio Bernardino da Silva - [Contato](https://www.linkedin.com/in/tony-silva/) - Linked In
+Antônio Bernardino da Silva - [Entre em contato](https://www.linkedin.com/in/tony-silva/) - Linked In
 
-Project Link: [https://github.com/Plankton-Project/Barber-App](https://github.com/Plankton-Project/Barber-App)
+Project Link: [https://github.com/The-Jellyfish-Project/Barber-App](https://github.com/The-Jellyfish-Project/Barber-App)
 
 

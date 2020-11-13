@@ -4,8 +4,8 @@ import Appointment from '../models/Appointments';
 
 class AppointmentRepository{
   public findByDate(date: Date): Appointment | null{
-    const findAppointment = this.appointments.find(apppointment =>
-      isEqual(date, apppointment.date),
+    const findAppointment = this.appointments.find(appointment =>
+      isEqual(date, appointment.date),
  );
  return findAppointment || null
   }

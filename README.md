@@ -1,8 +1,8 @@
 
 
 <p align="center">
-  <a href="https://github.com/The-Jellyfish-Project/Barber-App">
-    <img src="https://i.imgur.com/iYKPaZH.png" alt="Logo" width="300" height="300">
+  <a href="https://github.com/Tonybsilva-dev/Barber-App">
+    <img src="https://i.imgur.com/Lhfp94S.png" alt="Logo" width="300" height="300">
   </a>
 
   <h3 align="center">Barber App</h3>
@@ -15,14 +15,14 @@
   <a href="https://gitter.im/jlongster/prettier">
 </p>
   <p align="center">
-    <a href="https://github.com/The-Jellyfish-Project/Barber-App"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Tonybsilva-dev/Barber-App"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/The-Jellyfish-Project/Barber-App">View Demo</a>
+    <a href="https://github.com/Tonybsilva-dev/Barber-App">View Demo</a>
     ·
-    <a href="https://github.com/The-Jellyfish-Project/Barber-App/issues">Report Bug</a>
+    <a href="https://github.com/Tonybsilva-dev/Barber-App/issues">Report Bug</a>
     ·
-    <a href="https://github.com/The-Jellyfish-Project/Barber-App/issues">Request Feature</a>
+    <a href="https://github.com/Tonybsilva-dev/Barber-App/issues">Request Feature</a>
   </p>
 </p>
 
@@ -41,7 +41,6 @@
 * [Contributing](#contributing)
 * [License](#license)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
 
 
 ## About The Project
@@ -64,7 +63,7 @@ npm install npm@latest -g
 
 1. Clone the repo
 ```sh
-git clone https://github.com/The-Jellyfish-Project/Barber-App.git
+git clone https://github.com/Tonybsilva-dev/Barber-App.git
 ```
 2. Install NPM packages
 ```sh
@@ -82,14 +81,14 @@ npm install
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/The-Jellyfish-Project/Barber-App/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/TTonybsilva-dev/Barber-App/issues) for a list of proposed features (and known issues).
 
 
 
 <!-- CONTRIBUTING -->
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/The-Jellyfish-Project/Barber-App/wiki/Contributing).
+See [CONTRIBUTING.md](https://github.com/Tonybsilva-dev/Barber-App/wiki/Contributing).
 
 
 
@@ -105,6 +104,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Antônio Bernardino da Silva - [Entre em contato](https://www.linkedin.com/in/tony-silva/) - Linked In
 
-Project Link: [https://github.com/The-Jellyfish-Project/Barber-App](https://github.com/The-Jellyfish-Project/Barber-App)
+Project Link: [https://github.com/Tonybsilva-dev/Barber-App](https://github.com/Tonybsilva-dev/Barber-App)
+
+
+
 
 

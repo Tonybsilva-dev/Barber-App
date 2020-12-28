@@ -6,7 +6,7 @@ import routes from './routes';
 import './database';
 
 const app = express();
-const port = 3333 || 3334
+const port = 3334
 app.use(routes);
 app.use(express.json());
 

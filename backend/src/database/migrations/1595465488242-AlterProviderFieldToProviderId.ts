@@ -4,6 +4,7 @@ export default class AlterProviderFieldToProviderId1595465488242 implements Migr
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.dropColumn('appointments', 'provider');
+
     await queryRunner.addColumn('appointments', new TableColumn({
       name: 'provider_id',
       type: 'uuid',
@@ -12,7 +13,7 @@ export default class AlterProviderFieldToProviderId1595465488242 implements Migr
     );
 
     await queryRunner.createForeignKey('appointments', new TableForeignKey({
-      name: 'appointmentProvider',
+      name: 'AppointmentProvider',
       columnNames: ['provider_id'],
       referencedColumnNames: ['id'],
       referencedTableName: 'users',
@@ -22,7 +23,7 @@ export default class AlterProviderFieldToProviderId1595465488242 implements Migr
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropForeignKey('appointments', 'appointmentProvider')
+    await queryRunner.dropForeignKey('appointments', 'AppointmentProvider')
     await queryRunner.dropColumn('appointments', 'provider_id')
     await queryRunner.addColumn('appointments', new TableColumn({
       name: 'provider',

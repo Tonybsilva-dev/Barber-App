@@ -1,4 +1,6 @@
 import { Router } from 'express';
+import { getCustomRepository } from 'typeorm'
+import UsersRepository from '../repositories/UsersRepository';
 import CreateUserService from '../services/CreateUserService';
 const usersRouter = Router();
 
@@ -25,5 +27,15 @@ usersRouter.post('/', async (request, response) => {
         return response.status(400).json({ error: err.message });
     }
 });
+
+//Rota para obter usuários
+usersRouter.get('/', async (request, response) => {
+    //Pegamos um repositório para funções personalizadas
+    const usersRepository = getCustomRepository(UsersRepository)
+    //Buscamos todos os agendamentos
+    const users = await usersRepository.find();
+    //Retornamos todos os agendamentos
+    return response.json(users)
+  });
 
 export default usersRouter;

@@ -29,8 +29,6 @@ class CreateUserService {
       password: hashedPassword
     });
 
-    
-
     await usersRepository.save(user)
     
     return user;

@@ -31,8 +31,9 @@ export default class CreateAppointments1595137438430 implements MigrationInterfa
           },
           {
             name: 'updated_at',
-            type: 'varchar',
+            type: 'timestamp',
             isUnique: true,
+            default: 'now()',
           },
         ]
       })

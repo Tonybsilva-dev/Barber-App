@@ -4,6 +4,8 @@ import UsersRepository from '../repositories/UsersRepository';
 import CreateUserService from '../services/CreateUserService';
 const usersRouter = Router();
 
+
+
 //Rota responsável por criar um usuário
 usersRouter.post('/', async (request, response) => {
 

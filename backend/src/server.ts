@@ -17,11 +17,13 @@ Aqui ela traz o método e a url acessada. */
 
 function logRequests(request: any, response: any, next: any){
   const { method, url } = request;
+  console.log('==========')
   const logLabel = `[${method.toUpperCase()}] ${url}`
   console.log(logLabel);
   console.time(logLabel);
   next();
   console.timeEnd(logLabel);
+  console.log('==========')
 }
 
 // ========== END FUNCTIONS ==========

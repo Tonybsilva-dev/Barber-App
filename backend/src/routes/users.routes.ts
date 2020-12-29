@@ -4,9 +4,11 @@ const usersRouter = Router();
 
 //Rota responsável por criar um usuário
 usersRouter.post('/', async (request, response) => {
-    try {
+    
+    console.log(request.body)
+    try {    
         const { name, email, password } = request.body;
-
+        
         const createUser = new CreateUserService();
 
         const user = await createUser.execute({

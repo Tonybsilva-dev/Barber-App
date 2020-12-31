@@ -4,8 +4,6 @@ const sessionsRouter = Router();
 
 //Rota responsável por criar um usuário
 sessionsRouter.post('/', async (request, response) => {
-
-  console.log(request.body)
   try {
     //Requisita os dados necessários para logar
     const { email, password } = request.body

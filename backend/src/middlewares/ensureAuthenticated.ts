@@ -29,6 +29,7 @@ export default function ensureAuthenticated(request: any, response: Response, ne
     request.user = {
       id: sub
     }
+
     //Deixa prosseguir para a página
     return next();
   } catch {

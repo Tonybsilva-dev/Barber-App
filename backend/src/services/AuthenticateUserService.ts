@@ -2,6 +2,7 @@ import { getRepository } from 'typeorm'
 import { compare } from 'bcryptjs'
 import { sign } from 'jsonwebtoken'
 import User from '../models/User'
+import AuthConfig from '../config/auth'
 
 interface Request {
   email: string,
@@ -40,11 +41,14 @@ class AuthenticateUserService {
     3 - Terceiro parâmetro - configurações do Token
     */
 
-    const token = sign({}, '9787922f286a4349a009237d0b2ffd73', {
+    //Desestruturação do arquivo de configurações de Autenticação
+    const { secret, expiresIn } = AuthConfig.jwt
+
+    const token = sign({}, secret, {
       //Para saber a qual usuário pertence o token gerado
       subject: user.id,
       //Quanto tempo o usuário vai ficar logado
-      expiresIn: '1d',
+      expiresIn: expiresIn,
     });
 
     return {

@@ -41,7 +41,7 @@ appointmentsRouter.post('/', async (request: Request, response: Response) => {
     return response.json(appointment);
   } catch (err) {
     //Retornamos o erro nativo de status
-    return response.status(400).json({ error: err.message });
+    return response.status(err.statusCode).json({ error: err.message });
   }
 });
 

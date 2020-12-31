@@ -1,5 +1,6 @@
 import { getRepository } from 'typeorm';
 import uploadConfig from '../config/upload';
+import AppError from '../errors/AppError'
 import User from '../models/User';
 import path from 'path';
 import fs from 'fs';
@@ -20,7 +21,7 @@ class UpdatedUserAvatarService{
 
     //Caso não seja, ele cai nesse erro
     if(!user){
-      throw new Error('Only authenticaded users can change avatar.')
+      throw new AppError('Only authenticaded users can change avatar.', 401)
     }
 
     //Verifica se o usuário ja tinha um avatar, daí deletamos.

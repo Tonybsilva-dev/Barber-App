@@ -61,6 +61,10 @@ usersRouter.patch('/avatar', ensureAuthenticated, upload.single('avatar'), async
             user_id: request.user.id,
             avatarFileName: request.file.filename
         })
+
+        //Deletamos a senha do usuário que vem do response
+        delete user.password;
+
         //retornamos o usuário atualizado com base no service definido
         return response.json(user);
     } catch (err) {

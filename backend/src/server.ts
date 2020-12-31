@@ -2,6 +2,7 @@ import 'reflect-metadata';
 
 import express, {Request, Response, NextFunction} from 'express';
 import routes from './routes';
+import UploadConfig from './config/upload';
 
 import './database';
 
@@ -27,8 +28,11 @@ function logRequests(request: Request, response: Response, next: NextFunction){
 }
 
 // ========== END FUNCTIONS ==========
-
+//Rota de log de requisições
 app.use(logRequests)
+//Essa rota serve para mostrar as imagens do browser pelo nome salvo
+app.use('/files', express.static(UploadConfig.directory))
+//Aquivo de rotas gerais
 app.use(routes);
 
 const port = 3334

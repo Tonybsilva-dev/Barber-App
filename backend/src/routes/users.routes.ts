@@ -1,9 +1,13 @@
 import { Router } from 'express';
 import multer from 'multer';
 import UploadConfig from '../config/upload';
+
 import { getCustomRepository } from 'typeorm'
 import UsersRepository from '../repositories/UsersRepository';
+
 import CreateUserService from '../services/CreateUserService';
+import UpdatedUserAvatarService from '../services/UpdateUserAvatarService';
+
 import ensureAuthenticated from '../middlewares/ensureAuthenticated';
 
 const usersRouter = Router();
@@ -45,10 +49,23 @@ usersRouter.get('/', ensureAuthenticated, async (request, response) => {
 });
 
 //Para atualizar uma única informação do usuário se utiliza o método patch
-usersRouter.patch('/avatar', ensureAuthenticated, upload.single('avatar'), async (request, response) => {
-    
+usersRouter.patch('/avatar', ensureAuthenticated, upload.single('avatar'), async (request: any, response) => {
+
     console.log(request.file) // -> Obter dados do arquivo enviado.
-    return response.json({ ok: true })
+    try {
+        //Inicializando o serviço para atualizar o avatar
+        const updateUserAvatar = new UpdatedUserAvatarService();
+
+        //Necessário para atualizar o avatar
+        const user = await updateUserAvatar.execute({
+            user_id: request.user.id,
+            avatarFileName: request.file.filename
+        })
+        //retornamos o usuário atualizado com base no service definido
+        return response.json(user);
+    } catch (err) {
+        return response.status(400).json({ error: err.message });
+    }
 })
 
 export default usersRouter;

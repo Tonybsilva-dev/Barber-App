@@ -17,7 +17,6 @@ const upload = multer(UploadConfig);
 //Rota responsável por criar um usuário
 usersRouter.post('/', async (request, response) => {
 
-    try {
         //Dados necessários para criar um usuário    
         const { name, email, password } = request.body;
         //Iniciamos o serviço de Criar Usuário
@@ -32,10 +31,6 @@ usersRouter.post('/', async (request, response) => {
         delete user.password;
         //Retornamos o usuário
         return response.json(user)
-    } catch (err) {
-        //Retornamos o erro disponibilizado pelo serviço
-        return response.status(err.statusCode).json({ error: err.message });
-    }
 });
 
 //Rota para obter usuários
@@ -52,7 +47,7 @@ usersRouter.get('/', ensureAuthenticated, async (request, response) => {
 usersRouter.patch('/avatar', ensureAuthenticated, upload.single('avatar'), async (request: any, response) => {
 
     console.log(request.file) // -> Obter dados do arquivo enviado.
-    try {
+    
         //Inicializando o serviço para atualizar o avatar
         const updateUserAvatar = new UpdatedUserAvatarService();
 
@@ -67,9 +62,6 @@ usersRouter.patch('/avatar', ensureAuthenticated, upload.single('avatar'), async
 
         //retornamos o usuário atualizado com base no service definido
         return response.json(user);
-    } catch (err) {
-        return response.status(err.statusCode).json({ error: err.message });
-    }
 })
 
 export default usersRouter;

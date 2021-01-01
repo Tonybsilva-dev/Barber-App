@@ -12,7 +12,7 @@ const appointmentsRouter = Router();
 appointmentsRouter.use(ensureAuthenticated)
 //Rota para obter agendamentos
 appointmentsRouter.get('/', async (request: any, response: Response) => {
-
+  
   // console.log(request.user.id)
 
   //Pegamos um repositório para funções personalizadas
@@ -25,7 +25,7 @@ appointmentsRouter.get('/', async (request: any, response: Response) => {
 
 //Rota para criar um agendamento
 appointmentsRouter.post('/', async (request: Request, response: Response) => {
-  try {
+
     //Dados necessários para criar um agendamento
     const { provider_id, date } = request.body;
     //Convertendo a Data
@@ -39,10 +39,6 @@ appointmentsRouter.post('/', async (request: Request, response: Response) => {
     });
     //Retornamos o agendamento
     return response.json(appointment);
-  } catch (err) {
-    //Retornamos o erro nativo de status
-    return response.status(err.statusCode).json({ error: err.message });
-  }
 });
 
 export default appointmentsRouter;

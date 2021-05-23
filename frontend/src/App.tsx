@@ -1,12 +1,15 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom'
-import GlobalStyle from './styles/global';
-import Routes from './routes'
+import GlobalStyles from './styles/global'
 
-const App: React.FC = () =>
-<BrowserRouter>
-<Routes />
-<GlobalStyle />
-</BrowserRouter>
+import SingIn from './pages/SignIn'
+
+// import { Container } from './styles';
+
+const App: React.FC = () => (
+  <>
+    <SingIn />
+    <GlobalStyles />
+  </>
+)
 
 export default App;

@@ -5,24 +5,20 @@ const sessionsRouter = Router();
 //Rota responsável por criar um usuário
 sessionsRouter.post('/', async (request, response) => {
 
-  console.log(request.body)
-  try {
-
+    //Requisita os dados necessários para logar
     const { email, password } = request.body
-
+    //inicia o seviço de autenticação
     const autheticateUser = new AuthenticateUserService();
 
-    const { user } = await autheticateUser.execute({
+    //Passamos o dados do usuário pelo serviço para verificar credenciais
+    const { user, token } = await autheticateUser.execute({
       email,
       password,
     })
-
+    //Retiramos o password do response
     delete user.password;
-
-    return response.json({ user })
-  } catch (err) {
-    return response.status(400).json({ error: err.message });
-  }
+    //Retorna o usuário logado
+    return response.json({ user, token })
 });
 
 export default sessionsRouter;
